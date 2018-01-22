@@ -1,0 +1,181 @@
+
+header
+{
+    background-color: cadetblue;
+    width: 100%;
+    height: 65px;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+}
+#img1
+{
+    float: left;
+    width: 7%;
+    height: 100%;
+}
+#img2
+{
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+span
+{
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    font-size: 350%;
+}
+#userimg
+{
+    float: right;
+    height: 100%;
+    width: 5%;
+    margin-right: 40px;
+    border-width: 2px;
+    border-radius: 100%;
+    overflow: hidden;
+    background-image: url("file:///Users/dhruvpatel/Desktop/Project/Assets/Images/11.jpg")
+}
+#container
+{
+    background-size: 100%;
+    margin-top: 110px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#items
+{
+    margin: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: #efeeec;    
+}
+#orders
+{
+    margin: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    background-color: #efeeec;    
+}
+#itmHeading
+{
+    display: flex;
+    flex-direction: row;
+    padding-top: 4px 0px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(252, 249, 249);
+    background-color: #726f6f;
+    width: 100%;
+}
+.bt1
+{
+    width: 100%;
+    margin-top: 10px;
+    background-color: cadetblue;
+}
+.bt2
+{
+    width: 50%;
+    margin-top: 10px;
+    background-color: cadetblue;
+}
+#menu
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+a
+{
+    flex-grow: 1;
+    padding: 4px;
+}
+a:hover 
+{
+    background-color: rgb(0, 0, 0);
+}
+.itm
+{
+    background-color: #efeeec;
+    padding: 10px;
+    min-width:200px;
+    min-height: 150px;
+    max-width: 400px;
+    height: auto;
+    width: 30%;
+    border-radius: 5px;
+    margin: 5px;
+}
+.itm1
+{
+    background-color: #efeeec;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.ordered
+{
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.imgc
+{
+    width: 100%;
+    height: 150px;
+}
+.imgo
+{
+    width: 50%;
+    height: 150px;
+}
+.itm p{
+    font-size: 0.8em;
+    font-family: Roboto;
+    color: #000000 ;
+    line-height: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+.uorders
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+}
+.orderdes
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+}
+.tb
+{
+    width: 20px;
+}
+#rating
+{
+    padding-top: 10px;
+}

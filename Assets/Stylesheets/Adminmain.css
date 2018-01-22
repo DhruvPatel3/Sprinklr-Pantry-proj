@@ -1,0 +1,236 @@
+
+header
+{
+    background-color: cadetblue;
+    width: 95%;
+    height: 65px;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+}
+#img1
+{
+    float: left;
+    width: 7%;
+    height: 100%;
+}
+#img2
+{
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+span
+{
+    color: aliceblue;
+    font-family:  sans-serif;
+    font-size: 350%;
+}
+#userimg
+{
+    float: right;
+    height: 100%;
+    width: 5%;
+    border-width: 2px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 0px;
+    background-image: url("file:///Users/dhruvpatel/Desktop/Project/Assets/Images/11.jpg")
+}
+#mainContainer
+{
+    background-size: 100%;
+    margin-top: 110px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#totalOrders
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;  
+}
+#total
+{
+    margin: 10px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #efeeec; 
+    position: relative;
+}
+#itemlist
+{
+    height: 500px;
+    overflow-y: scroll;
+    margin-top: 15px;
+}
+#subtype
+{
+    display: flex;
+    flex-direction: row;
+    padding-top: 4px 0px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(252, 249, 249);
+    background-color: #726f6f;
+    width: 100%;
+    position: absolute;
+}
+a
+{
+    flex-grow: 1;
+    padding: 4px;
+}
+a:hover 
+{
+    background-color: rgb(0, 0, 0);
+}
+.imgc
+{
+    width: 100%;
+    height: 150px;
+}
+.itm
+{
+    background-color: #efeeec;
+    padding: 10px;
+    min-width: 200px;
+    min-height: 150px;
+    max-width: 400px;
+    height: auto;
+    width: 30%;
+    border-radius: 5px;
+    margin: 5px;
+}
+#ordersList
+{
+    margin: 10px;
+    width: 70%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #efeeec;    
+    position: relative;
+    overflow-y: scroll;
+}
+#Listtitle
+{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: absolute;
+    background-color: black;
+    color: #ffffff;
+    width: 100%;
+    font-family:  Roboto, sans-serif;
+    text-align: center;
+}
+#paralist
+{
+    width: 100%;
+    margin-top: 23px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-color: #555454;
+    justify-content: space-between;
+}
+#paralist p, #paralist2 p
+{
+    color: #ffffff;
+    text-align: center;
+}
+.p1
+{
+    flex-grow: 1;
+    text-align: center;
+    
+}
+.p2
+{
+    flex-grow: 2;
+    text-align: center;
+    
+} 
+.p3
+{
+    flex-grow: 1;
+    text-align: center;
+    
+} 
+.p4
+{
+    flex-grow: 2;
+    text-align: center;
+    
+} 
+.p5
+{
+    flex-grow: 1;
+    text-align: center;
+    
+} 
+.p6
+{
+    flex-grow: 1;
+    text-align: center;
+    
+} 
+#orders
+{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    height: 500px;
+    overflow-y: scroll;
+}
+#listimg
+{
+    width: 20px;
+    height: 20px;
+}
+.users ,.review1
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 4px;
+    height: auto;
+    border-style: groove;
+    border-width: 1px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+    height: fit-content;
+}
+#reviews
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #efeeec;
+}
+#paralist2
+{
+    display: flex;
+    flex-direction: row;
+    background-color: #555454;
+    justify-content: space-between;
+}
+#title2
+{
+    width: 100%;
+    text-align: center;
+    padding: 4px 0px;
+    color: #ffffff;
+    background-color: black;
+}
