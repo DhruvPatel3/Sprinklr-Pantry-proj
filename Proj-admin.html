@@ -7,17 +7,32 @@
     </head>
     <body>
         <header>
-            <img id="img1" src="Assets/Images/1.png">            
-            <span id="headtitle">Sprinklr Pantry</span> 
-            <div id="userimg"></div>               
+            <div id="upper-header">
+                <img id="logo" src="Assets/Images/1.png" />            
+                <span id="header-title">Sprinklr Pantry</span> 
+                <div id="user-img"></div>
+            </div>
+            <div id="lower-header">
+                <div id="lower-header-items">                   
+                    <button id="Beverages" class="header-button" onclick="switchCategory"><a accesskey="Beverages">Beverages</a></button>
+                    <button id="Snacks" class="header-button" onclick="switchCategory"><a accesskey="Snacks">Snacks</a></button>
+                    <button id="Fruits" class="header-button" onclick="switchCategory"><a accesskey="Fruits">Fruits</a></button>                    
+                </div>
+                <div id="lower-header-status">
+                    <button id="Current" class="header-button-selected" onclick="showStatusOrders(this)" >
+                        <a accesskey="Current">Current(<span id="current-counter">0</span>)</a>
+                    </button>
+                    <button id="Pending" class="header-button" onclick="showStatusOrders(this)">
+                        <a accesskey="Pending">Pending(<span id="pending-counter">0</span>)</a>
+                    </button>    
+                </div>
+            </div>               
         </header>
         <div id="mainContainer">
             <div id="totalOrders">
                 <div id="total">
                     <div id="subtype">
-                        <a>Beverages</a>
-                        <a>snacks</a>
-                        <a>Fruits</a>                    
+                        <span>Total orders</span>                  
                     </div>
                     <div id="itemlist">
                         <div class="itm">
@@ -41,296 +56,40 @@
                     </div>
                 </div>
                 <div id="ordersList">
-                    <p id="Listtitle">List of Orders</p>
                     <div id="paralist">
-                        <p class="p1">*</p>
-                        <p class="p2">User</p>
-                        <p class="p3">Table</p>
-                        <p class="p4">item</p>
-                        <p class="p5">Quantity</p>
-                        <p class="p6">Status</p>
+                        <span class="p1">No.</span>
+                        <span class="p2">User</span>
+                        <span class="p3">Table</span>
+                        <span class="p4">Items</span>
+                        <span class="p5">Quantity</span>
+                        <span class="p6"></span>
                     </div>
                     <div id="orders">
                         <div class="users">
                             <div class="p1">
-                                <p>*</p>
+                                <span>*</span>
                             </div>
                             <div class="p2">
                                 <img id="listimg" src="Assets/Images/1.png">
-                                <p>name</p>
+                                <span>name</span>
                             </div>
                             <div class="p3">
-                                <p>tableNO.</p>                                
+                                <span>tableNO.</span>                                
                             </div>
                             <div class="p4">
-                                <p>item1</p>
-                                <p>item2</p>
+                                <span>item1</span>
+                                <span>item2</span>
                             </div>
                             <div class="p5">
-                                <p>1</p>
-                                <p>2</p>
+                                <span>1</span>
+                                <span>2</span>
                             </div>
                             <div class="p6">
-                                <button>
-                                    Start
-                                </button>
-                                <button>
+                                <button class="bt1">
                                     Done
                                 </button>
                             </div>    
                         </div>
-                        <div class="users">
-                                <div class="p1">
-                                    <p>*</p>
-                                </div>
-                                <div class="p2">
-                                    <img id="listimg" src="Assets/Images/1.png">
-                                    <p>name</p>
-                                </div>
-                                <div class="p3">
-                                    <p>tableNO.</p>                                
-                                </div>
-                                <div class="p4">
-                                    <p>item1</p>
-                                    <p>item2</p>
-                                </div>
-                                <div class="p5">
-                                    <p>1</p>
-                                    <p>2</p>
-                                </div>
-                                <div class="p6">
-                                    <button>
-                                        Start
-                                    </button>
-                                    <button>
-                                        Done
-                                    </button>
-                                </div>    
-                            </div>
-                            <div class="users">
-                                    <div class="p1">
-                                        <p>*</p>
-                                    </div>
-                                    <div class="p2">
-                                        <img id="listimg" src="Assets/Images/1.png">
-                                        <p>name</p>
-                                    </div>
-                                    <div class="p3">
-                                        <p>tableNO.</p>                                
-                                    </div>
-                                    <div class="p4">
-                                        <p>item1</p>
-                                        <p>item2</p>
-                                    </div>
-                                    <div class="p5">
-                                        <p>1</p>
-                                        <p>2</p>
-                                    </div>
-                                    <div class="p6">
-                                        <button>
-                                            Start
-                                        </button>
-                                        <button>
-                                            Done
-                                        </button>
-                                    </div>    
-                                </div>
-                                <div class="users">
-                                        <div class="p1">
-                                            <p>*</p>
-                                        </div>
-                                        <div class="p2">
-                                            <img id="listimg" src="Assets/Images/1.png">
-                                            <p>name</p>
-                                        </div>
-                                        <div class="p3">
-                                            <p>tableNO.</p>                                
-                                        </div>
-                                        <div class="p4">
-                                            <p>item1</p>
-                                            <p>item2</p>
-                                        </div>
-                                        <div class="p5">
-                                            <p>1</p>
-                                            <p>2</p>
-                                        </div>
-                                        <div class="p6">
-                                            <button>
-                                                Start
-                                            </button>
-                                            <button>
-                                                Done
-                                            </button>
-                                        </div>    
-                                    </div>
-                                    <div class="users">
-                                            <div class="p1">
-                                                <p>*</p>
-                                            </div>
-                                            <div class="p2">
-                                                <img id="listimg" src="Assets/Images/1.png">
-                                                <p>name</p>
-                                            </div>
-                                            <div class="p3">
-                                                <p>tableNO.</p>                                
-                                            </div>
-                                            <div class="p4">
-                                                <p>item1</p>
-                                                <p>item2</p>
-                                            </div>
-                                            <div class="p5">
-                                                <p>1</p>
-                                                <p>2</p>
-                                            </div>
-                                            <div class="p6">
-                                                <button>
-                                                    Start
-                                                </button>
-                                                <button>
-                                                    Done
-                                                </button>
-                                            </div>    
-                                        </div>
-                                        <div class="users">
-                                                <div class="p1">
-                                                    <p>*</p>
-                                                </div>
-                                                <div class="p2">
-                                                    <img id="listimg" src="Assets/Images/1.png">
-                                                    <p>name</p>
-                                                </div>
-                                                <div class="p3">
-                                                    <p>tableNO.</p>                                
-                                                </div>
-                                                <div class="p4">
-                                                    <p>item1</p>
-                                                    <p>item2</p>
-                                                </div>
-                                                <div class="p5">
-                                                    <p>1</p>
-                                                    <p>2</p>
-                                                </div>
-                                                <div class="p6">
-                                                    <button>
-                                                        Start
-                                                    </button>
-                                                    <button>
-                                                        Done
-                                                    </button>
-                                                </div>    
-                                            </div>
-                                            <div class="users">
-                                                    <div class="p1">
-                                                        <p>*</p>
-                                                    </div>
-                                                    <div class="p2">
-                                                        <img id="listimg" src="Assets/Images/1.png">
-                                                        <p>name</p>
-                                                    </div>
-                                                    <div class="p3">
-                                                        <p>tableNO.</p>                                
-                                                    </div>
-                                                    <div class="p4">
-                                                        <p>item1</p>
-                                                        <p>item2</p>
-                                                    </div>
-                                                    <div class="p5">
-                                                        <p>1</p>
-                                                        <p>2</p>
-                                                    </div>
-                                                    <div class="p6">
-                                                        <button>
-                                                            Start
-                                                        </button>
-                                                        <button>
-                                                            Done
-                                                        </button>
-                                                    </div>    
-                                                </div>
-                                                <div class="users">
-                                                        <div class="p1">
-                                                            <p>*</p>
-                                                        </div>
-                                                        <div class="p2">
-                                                            <img id="listimg" src="Assets/Images/1.png">
-                                                            <p>name</p>
-                                                        </div>
-                                                        <div class="p3">
-                                                            <p>tableNO.</p>                                
-                                                        </div>
-                                                        <div class="p4">
-                                                            <p>item1</p>
-                                                            <p>item2</p>
-                                                        </div>
-                                                        <div class="p5">
-                                                            <p>1</p>
-                                                            <p>2</p>
-                                                        </div>
-                                                        <div class="p6">
-                                                            <button>
-                                                                Start
-                                                            </button>
-                                                            <button>
-                                                                Done
-                                                            </button>
-                                                        </div>    
-                                                    </div>
-                        <div class="users">
-                                <div class="p1">
-                                    <p>*</p>
-                                </div>
-                                <div class="p2">
-                                    <img id="listimg" src="Assets/Images/1.png">
-                                    <p>name</p>
-                                </div>
-                                <div class="p3">
-                                    <p>tableNO.</p>                                
-                                </div>
-                                <div class="p4">
-                                    <p>item1</p>
-                                    <p>item2</p>
-                                </div>
-                                <div class="p5">
-                                    <p>1</p>
-                                    <p>2</p>
-                                </div>
-                                <div class="p6">
-                                    <button>
-                                        Start
-                                    </button>
-                                    <button>
-                                        Done
-                                    </button>
-                                </div>    
-                            </div>
-                            <div class="users">
-                                    <div class="p1">
-                                        <p>*</p>
-                                    </div>
-                                    <div class="p2">
-                                        <img id="listimg" src="Assets/Images/1.png">
-                                        <p>name</p>
-                                    </div>
-                                    <div class="p3">
-                                        <p>tableNO.</p>                                
-                                    </div>
-                                    <div class="p4">
-                                        <p>item1</p>
-                                        <p>item2</p>
-                                    </div>
-                                    <div class="p5">
-                                        <p>1</p>
-                                        <p>2</p>
-                                    </div>
-                                    <div class="p6">
-                                        <button>
-                                            Start
-                                        </button>
-                                        <button>
-                                            Done
-                                        </button>
-                                    </div>    
-                                </div>
                     </div>
                 </div>
             </div>

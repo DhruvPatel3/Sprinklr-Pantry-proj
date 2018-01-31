@@ -2,48 +2,108 @@
 header
 {
     background-color: cadetblue;
-    width: 95%;
-    height: 65px;
+    width: 100%;
     text-align: center;
-    padding: 20px;
+    padding: 5px 5px 0px 0px; 
     position: fixed;
-    z-index: 1000;
+    vertical-align: middle;
+    z-index: 1;
     top: 0px;
     left: 0px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 1px 5px rgb(187, 187, 187);    
 }
-#img1
+#upper-header
+{
+    display: flex;
+    height: 40px;
+    justify-content: space-between;
+    margin: 5px;
+}
+#logo
 {
     float: left;
     width: 7%;
-    height: 100%;
+    margin-left: 10px;
+    height: 30px;
 }
-#img2
-{
-    float: right;
-    width: 100%;
-    height: 100%;
-}
-span
+#header-title
 {
     color: aliceblue;
-    font-family:  sans-serif;
-    font-size: 350%;
+    font-family: Arial, sans-serif;
+    font-size: 40px;
 }
-#userimg
+#user-img
 {
     float: right;
     height: 100%;
-    width: 5%;
+    width: 3%;
+    margin-right: 40px;
     border-width: 2px;
     border-radius: 100%;
     overflow: hidden;
-    padding: 0px;
-    background-image: url("file:///Users/dhruvpatel/Desktop/Project/Assets/Images/11.jpg")
+    background-image: url("file:///Users/dhruvpatel/Desktop/Project/Assets/Images/coffee.jpg")
+}
+#lower-header
+{
+    padding-left: 15px; 
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+}
+#lower-header-items
+{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+}
+#lower-header-status
+{
+    width: 40%;
+    margin-right: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#lower-header-status button
+{
+    flex-grow: 1;
+}
+.header-button
+{
+    color: #181717;
+    border-style: hidden;
+    font-size: 18px;
+    padding: 5px 0px;
+}
+a
+{
+    padding: 5px 34px;
+}
+
+#lower-header-status a
+{
+    padding: 5px 35%;
+}
+button :hover
+{
+    background-color: rgb(107, 104, 102);
+    color: #ffffff;
+}
+.header-button-selected
+{
+    color: #ffffff;
+    font-size: 18px;
+    padding: 5px 0px;
+    border-style: hidden;
+    background-color: #181717
 }
 #mainContainer
 {
     background-size: 100%;
-    margin-top: 110px;
+    margin-top: 85px;
     margin-right: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
@@ -57,7 +117,7 @@ span
 {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
 }
 #total
 {
@@ -68,34 +128,29 @@ span
     flex-wrap: wrap;
     background-color: #efeeec; 
     position: relative;
+    box-shadow: 2px 1px 5px rgb(187, 187, 187);   
 }
 #itemlist
 {
-    height: 500px;
+    margin-top: 20px;
+    max-height: 500px;
     overflow-y: scroll;
-    margin-top: 15px;
 }
 #subtype
 {
     display: flex;
     flex-direction: row;
-    padding-top: 4px 0px;
+    padding: 5px 0px;
     text-align: center;
+    justify-content: center;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(252, 249, 249);
-    background-color: #726f6f;
+    background-color: #555454;
     width: 100%;
     position: absolute;
 }
-a
-{
-    flex-grow: 1;
-    padding: 4px;
-}
-a:hover 
-{
-    background-color: rgb(0, 0, 0);
-}
+
 .imgc
 {
     width: 100%;
@@ -122,6 +177,7 @@ a:hover
     background-color: #efeeec;    
     position: relative;
     overflow-y: scroll;
+    box-shadow: 2px 1px 5px rgb(187, 187, 187);   
 }
 #Listtitle
 {
@@ -137,7 +193,7 @@ a:hover
 #paralist
 {
     width: 100%;
-    margin-top: 23px;
+    padding: 5px 0px;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -145,54 +201,70 @@ a:hover
     background-color: #555454;
     justify-content: space-between;
 }
-#paralist p, #paralist2 p
+#paralist span, #paralist2 p
 {
-    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(252, 249, 249);
     text-align: center;
+}
+.p1,.p2,.p3,.p4,.p5,.p6
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .p1
 {
-    flex-grow: 1;
     text-align: center;
-    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 10%;
 }
 .p2
 {
-    flex-grow: 2;
     text-align: center;
-    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 22%;
 } 
 .p3
 {
-    flex-grow: 1;
-    text-align: center;
-    
+    text-align: center;    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 16%;
 } 
 .p4
 {
-    flex-grow: 2;
-    text-align: center;
-    
+    text-align: center;    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 22%;
 } 
 .p5
 {
-    flex-grow: 1;
-    text-align: center;
-    
+    text-align: center;    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15%;
 } 
 .p6
 {
-    flex-grow: 1;
-    text-align: center;
-    
+    text-align: center;    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 15%;
 } 
+.bt1
+{
+    background-color: rgb(31, 82, 8);
+    color: aliceblue;
+    padding: 4px;
+    width: 90%
+}
 #orders
 {
     flex-direction: column;
     flex-wrap: nowrap;
-    margin-top: 40px;
-    height: 500px;
+    margin-top: 30px;
+    max-height: 500px;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 #listimg
 {
@@ -204,13 +276,14 @@ a:hover
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 4px;
+    width: 100%;
+    padding: 4px 0px;
     height: auto;
     border-style: groove;
     border-width: 1px;
     justify-content: center;
     align-items: center;
-    margin-top: 4px;
+    margin: 2px 0px;
     height: fit-content;
 }
 #reviews

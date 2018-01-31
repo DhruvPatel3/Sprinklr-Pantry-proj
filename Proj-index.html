@@ -1,132 +1,126 @@
 <!DOCTYPE html>
 <html>
     <head>
-        
         <title>Sprinklr</title>
-        <link rel="stylesheet" href="Assets/Stylesheets/reset.css" >
-        <link rel="stylesheet" href="Assets/Stylesheets/main.css" >
+        <link rel="stylesheet" href="Assets/Stylesheets/reset.css" />
+        <link rel="stylesheet" href="Assets/Stylesheets/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
-    <body>
+    <body onload="onLoadFunction()">
         <header>
-            <img id="img1" src="Assets/Images/1.png">            
-            <span id="headtitle">Sprinklr Pantry</span> 
-            <div id="userimg"></div>               
+            <div id="upper-header">
+                <img id="logo" src="Assets/Images/1.png" />            
+                <span id="header-title">Sprinklr Pantry</span> 
+                <div id="user-img"></div>
+            </div>
+            <div id="lower-header">
+                <div id="lower-header-items">
+                    <button id="all" class="header-button" onclick="switchCategory(this)">All</button>                    
+                    <button id="Beverages" class="header-button" onclick="switchCategory(this)">Beverages</button>
+                    <button id="Snacks" class="header-button" onclick="switchCategory(this)">Snacks</button>
+                    <button id="Fruits" class="header-button" onclick="switchCategory(this)">Fruits</button>                    
+                </div>
+                <div id="lower-header-status">
+                    <button id="Current" class="header-button-selected" onclick="showStatusOrders(this)" >
+                        Current(<span id="current-counter">0</span>)
+                        <div id="snackbar">Some text some message..</div>
+                    </button>
+                    <button id="Pending" class="header-button" onclick="showStatusOrders(this)">
+                        Pending(<span id="pending-counter">0</span>)
+                    </button>
+                    <button id="Completed" class="header-button" onclick="showStatusOrders(this)">
+                        Completed
+                    </button>                    
+                </div>
+            </div>               
         </header>
         <div id="container">
             <div id="items">
-                <div id="itmHeading">
-                    <a>Beverages</a>
-                    <a>Snacks</a>
-                    <a>Fruits</a>                    
-                </div>
                 <div id="menu">
-                    <div class="itm">
-                            <img class="imgc" src="Assets/Images/11.jpg">
-                            <p>Coffee</p>
-                            <p class="dsc">Description:-
-                                            wqwertyuiopasdfghjklzxcvbnm
-                            </p>
-                            <p>Estimated time:- 5mins
-                            </p>
-                            <div id="rating">
-                                <a>☆</a><a>☆</a><a>☆</a><a>☆</a><a>☆</a>
-                                based on X reviews
-                            </div>
-                            <div class="uorders">
-                                    <p>Quantity:- </p>
-                                    <button>+</button>
-                                    <input class="tb" type="text">
-                                    <button>-</button>
-                            </div>
-                            <button class="bt1">Order it!</button>                            
+                    <!--
+                    <div class="item">
+                        <img class="item-img" src="Assets/Images/11.jpg" />
+                        <span class="item-name">Coffee</span>
+                        <div id="rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            based on <span> X </span>reviews
+                        </div>
+                        <div class="quantity-div">
+                            <span>Quantity:- </span>
+                            <button class="quantity-plus-minus">-</button>
+                            <input class="quantity" type="text" placeholder="1">
+                            <button class="quantity-plus-minus">+</button>
+                        </div>
+                        <div class = "item-button">
+                            <button class="add-to-current-order">Add to current order</button>                            
+                            <button class="order-it">Order it!</button>
+                        </div>
                     </div>
-                    <div class="itm">
-                            <img class="imgc" src="Assets/Images/11.jpg">
-                            <p>Coffee</p>
-                            <p>Description:-
-                                            wqwertyuiopasdfghjklzxcvbnm
-                            </p>
-                            <p>Estimated time:- 5mins
-                            </p>
-                            <div id="rating">
-                                <a>&#9734</a><a>☆</a><a>☆</a><a>☆</a><a>☆</a>
-                                based on X reviews
-                            </div>
-                            <div class="uorders">
-                                    <p>Quantity:- </p>
-                                    <button>+</button>
-                                    <input class="tb" type="text">
-                                    <button>-</button>
-                            </div>
-                            <button class="bt1">Order it!</button>                            
-                    </div>
-                    <div class="itm">
-                            <img class="imgc" src="Assets/Images/11.jpg">
-                            <p>Coffee</p>
-                            <p>Description:-
-                                            wqwertyuiopasdfghjklzxcvbnm
-                            </p>
-                            <p>Estimated time:- 5mins
-                            </p>
-                            <div id="rating">
-                                <a>☆</a><a>☆</a><a>☆</a><a>☆</a><a>☆</a>
-                                based on X reviews
-                            </div>
-                            <div class="uorders">
-                                    <p>Quantity:- </p>
-                                    <button>+</button>
-                                    <input class="tb" type="text">
-                                    <button>-</button>
-                                </div>
-                            <button class="bt1">Order it!</button>                            
-                    </div>
-                    <div class="itm">
-                            <img class="imgc" src="Assets/Images/11.jpg">
-                            <p>Coffee</p>
-                            <p>Description:-
-                                            wqwertyuiopasdfghjklzxcvbnm
-                            </p>
-                            <p>Estimated time:- 5mins
-                            </p>
-                            <div id="rating">
-                                <a>☆</a><a>☆</a><a>☆</a><a>☆</a><a>☆</a>
-                                based on X reviews
-                            </div>
-                            <div class="uorders">
-                                    <p>Quantity:-   </p>
-                                    <button>+</button>
-                                    <input class="tb" type="text">
-                                    <button>-</button>
-                                </div>
-                            <button class="bt1">Order it!</button>                            
-                    </div>
+                    -->
                 </div>
             </div>
             <div id="orders">
-                <div id="itmHeading">
-                    <a>Pending</a>
-                    <a>Completed</a>
-                </div>
-                <div class="itm1">
-                    <div class="ordered">
-                        <img class="imgo" src="Assets/Images/11.jpg">                    
-                        <div class="orderdes">
-                            <p>Coffee</p>
-                            <p>Estimated time:-</p>
-                            <p>X mins</p>
-                            <div class="uorders">
-                                    <p>Quantity:- </p>
-                                    <button>+</button>
-                                    <input class="tb" type="text">
-                                    <button>-</button>
+                <div id="Current-order-container">
+                    <div id="current-ordered">
+                        <!--
+                        <div class="ordered-item">
+                            <span>1</span>
+                            <span>Coffee</span>
+                            <div class="quantity-div-ordered">
+                                <span>Quantity:</span>
+                                <button class="quantity-plus-minus">-</button>
+                                <input class="quantity" type="text" placeholder="1">
+                                <button class="quantity-plus-minus">+</button>
                             </div>
-                            <div class="uorders">
-                                <button class="bt1">cancel</button>
-                            </div>
+                            <button class="bt1">Remove</button>
                         </div>
+                        -->
+                    </div>
+                    <div id = "current-order-buttons">
+                            <button class="add-to-current-order" onclick="clearCurrentOrder()">Cancel</button>                            
+                            <button class="order-it" onclick="addNewOrder()">Place order</button>
+                    </div>
+                    <div id="default-current">
+                        Your current order has nothing!
                     </div>
                 </div>
+                <div id="Pending-order-container">
+                    <div id="pending-order-paralist">
+                        <span class="p1">No.</span>
+                        <span class="p4">Items</span>
+                        <span class="p5">Quantity</span>
+                        <span class="p6"> </span>
+                    </div>
+                    <div id="pending-orders">
+                        <!-- <div class="pending-order-items">
+                            <span class="p1">1</span>
+                            <div class="pending-single-order-items">
+                                <span>apple</span>
+                                <span>maggi</span>
+                                <span>tea</span>                        
+                            </div>
+                            <div class="pending-single-order-quantities">
+                                    <span>1</span>
+                                    <span>1</span>
+                                    <span>1</span>
+                            </div>
+                            <button class="p6">cancel</button>
+                        </div> -->
+                    </div>
+                    <div id="default-pending">
+                            Your have no pending orders!
+                    </div>
+                </div>
+                <div id="Completed-order-container">
+
+                </div>
             </div>
+            
         </div>
+        <script src="Assets/JS/main.js"></script>
     </body>
 </html>
