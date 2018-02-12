@@ -13,18 +13,13 @@
                 <div id="user-img"></div>
             </div>
             <div id="lower-header">
-                <div id="lower-header-items">                   
-                    <button id="Beverages" class="header-button" onclick="switchCategory"><a accesskey="Beverages">Beverages</a></button>
-                    <button id="Snacks" class="header-button" onclick="switchCategory"><a accesskey="Snacks">Snacks</a></button>
-                    <button id="Fruits" class="header-button" onclick="switchCategory"><a accesskey="Fruits">Fruits</a></button>                    
-                </div>
                 <div id="lower-header-status">
-                    <button id="Current" class="header-button-selected" onclick="showStatusOrders(this)" >
-                        <a accesskey="Current">Current(<span id="current-counter">0</span>)</a>
+                    <!-- <button id="Current" class="header-button-selected" onclick="showStatusOrders(this)" >
+                        Orders(<span id="current-counter">0</span>)
                     </button>
                     <button id="Pending" class="header-button" onclick="showStatusOrders(this)">
-                        <a accesskey="Pending">Pending(<span id="pending-counter">0</span>)</a>
-                    </button>    
+                        Reviews(<span id="pending-counter">0</span>)
+                    </button>     -->
                 </div>
             </div>               
         </header>
@@ -57,8 +52,9 @@
                 </div>
                 <div id="ordersList">
                     <div id="paralist">
-                        <span class="p1">No.</span>
+                        <span class="p0"></span>
                         <span class="p2">User</span>
+                        <span class="p1">Time</span>
                         <span class="p3">Table</span>
                         <span class="p4">Items</span>
                         <span class="p5">Quantity</span>
@@ -66,12 +62,13 @@
                     </div>
                     <div id="orders">
                         <div class="users">
+                            <div class="p0"></div>
+                            <div class="p2">
+                                    <img id="listimg" src="Assets/Images/1.png">
+                                    <span>name</span>
+                            </div>
                             <div class="p1">
                                 <span>*</span>
-                            </div>
-                            <div class="p2">
-                                <img id="listimg" src="Assets/Images/1.png">
-                                <span>name</span>
                             </div>
                             <div class="p3">
                                 <span>tableNO.</span>                                
@@ -92,9 +89,11 @@
                         </div>
                     </div>
                 </div>
+                <div>
+
+                </div>
             </div>
             <div id="reviews">
-                    <p id="title2">REVIEWS</p>
                     <div id="paralist2">
                         <p class="p1">*</p>
                         <p class="p2">User</p>
@@ -164,5 +163,6 @@
                         </div>
             </div>
         </div>
+        <script src="Assets/JS/adminJS.js"></script>
     </body>
 </html>

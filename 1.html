@@ -1,1 +1,19 @@
-<div>Welcome</div>
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="root"> </div>
+        <script>
+            function x()
+            {
+                let ele = document.getElementById("root");
+                ele.innerHTML = "";
+                let ele1 = document.createElement("p");
+                ele1.innerHTML = `<h1>${new Date().toLocaleString()}</h1>`;
+                ele.appendChild(ele1);    
+            }
+            setInterval(x,1000);
+        </script>
+    </body>
+</html>
