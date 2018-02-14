@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import getCities from './cities'
+
 
 const categoryConstants = 
 {
@@ -91,6 +93,11 @@ class App extends Component
 	}
 	onCategoryChange(category)
 	{
+		let x = getCities();
+		console.log("hdhd",x);
+		x.then(() => {
+			console.log("bro");
+		})
 		this.setState(()=>({
 			currentCategory: category
 		}));
@@ -261,7 +268,7 @@ class NavBar extends Component
 				{Object.keys(this.constants).map((category) => {
 					return <button key={this.constants[category]} id={this.constants[category]} 
 								className = {`header-button${(this.constants[category] === this.props.currentValue)?"-selected":""}`} 
-								onClick={() => {this.handleChange(this.constants[category])}} >
+								onClick={()=>(this.handleChange(this.constants[category]))} >
 					{this.constants[category]}{!this.props.categoryFlag &&
 						 <span>(<span id="${constants[category]}-count">{this.props.data[this.constants[category].toLowerCase() + "Orders"].length}</span>)</span>}
 					</button>;
@@ -465,11 +472,11 @@ class CartOrderTemplate extends Component
 				<span className="currentorder-name">{item.name}</span>
 				<div className="quantity-div-ordered">
 					<span>Quantity:</span>
-					<button className="quantity-minus" onClick={}>-</button>
+					<button className="quantity-minus" >-</button>
 					<span id={`quantity-div-ordered-${item.id}`} className="current-quantity-counter" >{item.quantity}</span>
-					<button className="quantity-plus" onClick={}>+</button>
+					<button className="quantity-plus" >+</button>
 				</div>
-				<button className="bt1" onClick={}>Remove</button>
+				<button className="bt1" >Remove</button>
 			</div>
 		);
 	}
